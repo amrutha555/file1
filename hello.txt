@@ -1,3 +1,216 @@
-Heyyy
-What's up?
-Twitter
+
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+  FILE *fptr;
+  char ch1;
+  int points=0,que1,que2,que3,que4,que5,que6,que7,que8,que9,que10;
+  char ch[50];
+  fptr=fopen("Quiz.txt","w");
+  if(fptr==NULL)
+  {
+      printf("\nFile doesnot exist");
+   }
+   else
+   {
+      printf("\nFile exists");
+   }
+   fclose(fptr);
+   fptr=fopen("question1.txt","r");
+   while(!feof(fptr))
+   {
+      ch1=fgetc(fptr);
+      printf("%c",ch1);
+   }
+   fclose(fptr);
+   printf("\nEnter your answer:");
+   scanf("%d",&que1);
+   if(que1=='C') 
+   {
+     printf("Correct answer");
+   }
+   else
+   {
+     printf("Wrong answer");
+   }
+   fptr=fopen("question2.txt","r");
+   while(!feof(fptr))
+   {
+      ch1=fgetc(fptr);
+      printf("%c",ch1);
+   }
+   fclose(fptr);
+   printf("\nEnter your answer:");
+   scanf("%d",&que2);
+   if(que2=='A')
+   {
+     printf("Correct answer");
+   }
+   else
+   {
+     printf("Wrong answer");
+   }
+   fptr=fopen("question3.txt","r");
+   while(!feof(fptr))
+   {
+      ch1=fgetc(fptr);
+      printf("%c",ch1);
+   }
+   fclose(fptr);
+   printf("\nEnter your answer:");
+   scanf("%d",&que3);
+   if(que3=='B')
+   {
+     printf("Correct answer");
+   }
+   else
+   {
+     printf("Wrong answer");
+   }
+   fptr=fopen("question4.txt","r");
+   while(!feof(fptr))
+   {
+      ch1=fgetc(fptr);
+      printf("%c",ch1);
+   }
+   fclose(fptr);
+   printf("\nEnter your answer:");
+   scanf("%d",&que4);
+   if(que4=='D')
+   {
+     printf("Correct answer");
+   }
+   else
+   {
+     printf("Wrong answer");
+   }
+   fptr=fopen("question5.txt","r");
+   while(!feof(fptr))
+   {
+      ch1=fgetc(fptr);
+      printf("%c",ch1);
+   }
+   fclose(fptr);
+   printf("\nEnter your answer:");
+   scanf("%d",&que5);
+   if(que5=='C') 
+   {
+     printf("Correct answer");
+   }
+   else
+   {
+     printf("Wrong answer");
+   }
+   fptr=fopen("question.txt","r");
+   while(!feof(fptr))
+   {
+      ch1=fgetc(fptr);
+      printf("%c",ch1);
+   }
+   fclose(fptr);
+   printf("\nEnter your answer:");
+   scanf("%d",&que6);
+   if(que6=='C')
+   {
+     printf("Correct answer");
+   }
+   else
+   {
+     printf("Wrong answer");
+   }
+   fptr=fopen("question7.txt","r");
+   while(!feof(fptr))
+   {
+      ch1=fgetc(fptr);
+      printf("%c",ch1);
+   }
+   fclose(fptr);
+   printf("\nEnter your answer:");
+   scanf("%d",&que7);
+   if(que7=='A')
+   {
+     printf("Correct answer");
+   }
+   else
+   {
+     printf("Wrong answer");
+   }
+   fptr=fopen("question8.txt","r");
+   while(!feof(fptr))
+   {
+      ch1=fgetc(fptr);
+      printf("%c",ch1);
+   }
+   fclose(fptr);
+   printf("\nEnter your answer:");
+   scanf("%d",&que8);
+   if(que8=='D') 
+   {
+     printf("Correct answer");
+   }
+   else
+   {
+     printf("Wrong answer");
+   }
+   fptr=fopen("question9.txt","r");
+   while(!feof(fptr))
+   {
+      ch1=fgetc(fptr);
+      printf("%c",ch1);
+   }
+   fclose(fptr);
+   printf("\nEnter your answer:");
+   scanf("%d",&que9);
+   if(que9=='D') 
+   {
+     printf("Correct answer");
+   }
+   else
+   {
+     printf("Wrong answer");
+   }
+   fptr=fopen("question10.txt","r");
+   while(!feof(fptr))
+   {
+      ch1=fgetc(fptr);
+      printf("%c",ch1);
+   }
+   fclose(fptr);
+   printf("\nEnter your answer:");
+   scanf("%d",&que10);
+   if(que10=='C')
+   {
+     printf("Correct answer");
+   }
+   else
+   {
+     printf("Wrong answer");
+   }
+}
+int score()
+{
+int score,point=0;
+score=point*10;
+if(score>=65)
+{
+printf("\n..............Congratulations You completed the Quiz............");
+printf("\nYour score is %d",score);
+}
+else
+{
+printf("\n.........Thank you for your Participation..........");
+printf("\nTry Again");
+}
+return score;
+}
+void go()
+{
+char playername[20];
+int score;
+printf("\nPress Y if you want to play next game");
+if(key=='Y')
+printf("Play Round1");
+else
+printf("Mainmenu");
+}
